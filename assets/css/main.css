@@ -549,6 +549,19 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+
+    .navmenu .cta-btn {
+    display: inline-block;
+    width: auto;
+    padding: 8px 20px;
+    margin: 10px auto;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  .navmenu li.d-xl-none {
+    text-align: center;
+  }
 }
 
 /*--------------------------------------------------------------
