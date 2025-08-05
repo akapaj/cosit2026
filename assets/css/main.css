@@ -913,7 +913,7 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 10%); /*was 20
+  color: color-mix(in srgb, var(--default-color), transparent 20%); /*was 20
   margin: 10px 0 0 0;
   font-size: 24px;
 }
