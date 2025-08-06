@@ -281,7 +281,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.9);
 }
 
 /* Global Header on Scroll
