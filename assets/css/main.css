@@ -261,7 +261,7 @@ h6 {
 .header .cta-btn:hover,
 .header .cta-btn:focus:hover {
   color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 100%);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 @media (max-width: 1200px) {
@@ -281,7 +281,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.5);
 }
 
 /* Global Header on Scroll
