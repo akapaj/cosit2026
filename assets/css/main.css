@@ -1702,6 +1702,7 @@ section,
 
 .member-info {
   text-align: center;
+  padding: 25px 15px 0 15px;
 }
 
 .member-info .person {
