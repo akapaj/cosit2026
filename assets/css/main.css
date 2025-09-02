@@ -1704,6 +1704,11 @@ section,
   text-align: center;
 }
 
+.member-info .person {
+  margin-bottom: 20px;
+  /* adjust the spacing as you like */
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
