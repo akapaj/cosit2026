@@ -1702,11 +1702,11 @@ section,
 
 .member-info {
   text-align: center;
-  padding: 25px 15px 0 15px;
+  padding: 15px 15px 0 15px;
 }
 
 .member-info .person {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   /* adjust the spacing as you like */
 }
 
