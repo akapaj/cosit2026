@@ -1184,7 +1184,7 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form class="php-email-form" action="https://formspree.io/f/xrbaaool" method="POST">
+            <form class="php-email-form" action="https://formspree.io/f/myID" method="POST">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -1207,8 +1207,8 @@
                   <button type="submit">Send Message</button>
                 </div>
 
-                <div class="col-md-12">
-                  <div class="sent-message">Thank you! Your message has been sent.
+                <div class="col-md-12 text-center mt-3">
+                  <div class="sent-message" style="display:none; color:white; background:#28a745;">Thank you! Your message has been sent.
                   </div>
                 </div>
 
@@ -1216,47 +1216,26 @@
             </form>
           </div>
 
-          <!-- Styles -->
-          <style>
-            .sent-message {
-              display: none;
-              /* Hidden by default */
-              color: white;
-              /* Text color */
-              background-color: #28a745;
-              /* Green background */
-              padding: 12px 20px;
-              border-radius: 6px;
-              text-align: center;
-              margin-top: 1rem;
-              font-weight: bold;
-            }
-          </style>
-
-          <!-- Simple JS to handle form submission -->
           <script>
-            const form = document.getElementById('contactForm');
+            const form = document.querySelector('.php-email-form');
             const msg = form.querySelector('.sent-message');
 
-            form.addEventListener('submit', async (e) => {
-              e.preventDefault();
-
-              try {
-                const response = await fetch(form.action, {
-                  method: form.method,
-                  body: new FormData(form),
-                  headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                  msg.style.display = 'block';
-                  form.reset();
-                } else {
-                  alert('Oops! Something went wrong. Please try again.');
-                }
-              } catch (error) {
-                alert('Oops! Something went wrong. Please try again.');
-              }
+            form.addEventListener('submit', e => {
+              e.preventDefault(); // prevent page reload
+              fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              })
+                .then(response => {
+                  if (response.ok) {
+                    msg.style.display = 'block';
+                    form.reset();
+                  } else {
+                    alert('Oops! Something went wrong.');
+                  }
+                })
+                .catch(() => alert('Oops! Something went wrong.'));
             });
           </script>
 
