@@ -1139,7 +1139,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>If you have any questions, please don’t hesitate to contact the organizing committee using the email address or the form below.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1208,7 +1208,8 @@
                 </div>
 
                 <div class="col-md-12 text-center mt-3">
-                  <div class="sent-message" style="display:none; color:white; background:#28a745;">Thank you! Your message has been sent.
+                  <div class="sent-message" style="display:none; color:white; background:#28a745;">Thank you! Your
+                    message has been sent.
                   </div>
                 </div>
 
@@ -1231,6 +1232,9 @@
                   if (response.ok) {
                     msg.style.display = 'block';
                     form.reset();
+                    setTimeout(() => {
+                      msg.style.display = 'none'; // Hide message after 5 seconds
+                    }, 5000);
                   } else {
                     alert('Oops! Something went wrong.');
                   }
