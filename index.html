@@ -1184,28 +1184,60 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="https://formspree.io/f/xrbaaool" method="POST" class="php-email-form">
-              <input type="hidden" name="_redirect" value="https://cosit2026.uk/thanks.html">
-
+            <form class="php-email-form" action="https://formspree.io/f/xrbaaool" method="POST">
               <div class="row gy-4">
+
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
+
                 <div class="col-md-6">
-                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
+
                 <div class="col-md-12">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                 </div>
+
                 <div class="col-md-12">
-                  <textarea name="message" rows="6" class="form-control" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
+
                 <div class="col-md-12 text-center">
                   <button type="submit">Send Message</button>
                 </div>
+
+                <div class="col-md-12 text-center mt-3">
+                  <div class="sent-message" style="display:none; color:green;">Thank you! Your message has been sent.
+                  </div>
+                </div>
+
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
+
+          <script>
+            const form = document.querySelector('.php-email-form');
+            const msg = form.querySelector('.sent-message');
+
+            form.addEventListener('submit', e => {
+              e.preventDefault(); // prevent page reload
+              fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+              })
+                .then(response => {
+                  if (response.ok) {
+                    msg.style.display = 'block';
+                    form.reset();
+                  } else {
+                    alert('Oops! Something went wrong.');
+                  }
+                })
+                .catch(() => alert('Oops! Something went wrong.'));
+            });
+          </script>
 
 
         </div>
