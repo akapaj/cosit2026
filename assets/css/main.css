@@ -1700,9 +1700,9 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
+
   /* Add your styles here */
-  .team .member-info {
-      text-align: center;
-      padding: 20px;
-    }
+  .member-info {
+    text-align: center;
+  }
 }
