@@ -1697,12 +1697,17 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Custom CSS for the Organizing committee
+--------------------------------------------------------------*/
+
+.member-info {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
 
   /* Add your styles here */
-  .member-info {
-    text-align: center;
-  }
 }
