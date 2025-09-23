@@ -514,6 +514,28 @@
           margin-top: 1.5rem;
           /* increases space above the h3 */
         }
+    
+        #cfp ul {
+          columns: 2;
+          /* two-column layout */
+          -webkit-columns: 2;
+          /* support for Safari/Chrome */
+          -moz-columns: 2;
+          /* support for Firefox */
+          column-gap: 2rem;
+          /* space between columns */
+          margin-top: 0.5rem;
+          list-style-type: disc;
+          padding-left: 1.5rem;
+          /* indentation for bullets */
+        }
+    
+        #cfp li {
+          break-inside: avoid;
+          /* prevents awkward splits between columns */
+          margin-bottom: 0.4rem;
+          /* spacing between items */
+        }
       </style>
       <div class="container section-title" data-aos="fade-up">
         <h2>Call for Papers<br></h2>
