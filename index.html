@@ -767,11 +767,20 @@
           /* space between list items */
         }
 
-        #doctoral ol {
+        /* Ordered list with capital letters */
+        #doctoral ol.letters {
           list-style-type: upper-alpha;
           /* A, B, C, ... */
           padding-left: 1.5rem;
-          /* indentation for items */
+          margin-top: 0.35rem;
+          text-align: left;
+        }
+
+        /* Ordered list with numbers */
+        #doctoral ol.decimal {
+          list-style-type: decimal;
+          /* 1, 2, 3, ... */
+          padding-left: 1.5rem;
           margin-top: 0.35rem;
           text-align: left;
         }
@@ -794,7 +803,7 @@
         <h3>Feedback Pillar</h3>
         <p>Based on your research experience and stage of study, choose how you wish to contribute and get feedback:<br>
         </p>
-        <ol>
+        <ol class="letters">
           <li><em>Early Stage Proposal:</em> Submit a proposal on how you are going to tackle a particular research
             problem or question, how you plan to use a specific method, etc. </li>
           <li><em>Later Stage Summary:</em> Submit a summary of your ongoing PhD research. This is meant for ongoing
@@ -809,16 +818,46 @@
 
         <h3>Insights Presentation Pillar</h3>
         <p>One conference session at this year’s COSIT 2026 conference will be dedicated to doctoral lightning
-          presentations, open exclusively to doctoral students. As COSIT is a single-track conference, the participant will present to
-          all conference participants. This is a fantastic opportunity for early career researchers to present their work to
+          presentations, open exclusively to doctoral students. As COSIT is a single-track conference, the participant
+          will present to
+          all conference participants. This is a fantastic opportunity for early career researchers to present their
+          work to
           a large audience of like-minded researchers.</br></p>
 
         <h3>How to Apply</h3>
         <p>To apply for the doctoral mentoring program, submit an Expression of Interest (EOI), up to 7 pages in length
           (maximum). Please use the <a
             href="https://www.overleaf.com/latex/templates/article-for-the-lipics-series/qmwncxspzfst"
-            target="_blank">LaTeX template</a> provided for the conference to write your EOI. You will need to submit this
-          as a single PDF document through the form below. </br></p>
+            target="_blank">LaTeX template</a> provided for the conference to write your EOI. You will need to submit
+          this as a single PDF document through the form below. The EOI must include:</br></p>
+
+        <ol class="decimal">
+          <li>A brief biographical note, including contact data (name, affiliation, email address) and stage of your
+            doctoral
+            degree (e.g., First year, Final Year, etc.)</li>
+          <li>A maximum one-page overview of your PhD research or proposed research.</li>
+          <li>A maximum one-page overview of your PhD research or proposed research.</li>
+          <li>Your chosen type of <b>Feedback Pillar</b> A, B, or C, for the selected option: </li>
+        </ol>
+
+        <ol class="letters">
+          <li><em>Early Stage Proposal:</em> Provide a detailed account of your research problem / issue,
+            method, etc., and the specifics of what you wish to get feedback on.</li>
+          <li><em>Later Stage Summary:</em> Provide a detailed summary/proposal/plan of your PhD research,
+            with enough specifics to enable specific feedback on it. </li>
+          <li><em>Peer-Reviewed Submission:</em> Provide the submitted abstract of your paper for peer
+            review and describe how this paper fits into your overall PhD research goals.</li>
+        </ol>
+
+        <p>All submitted EOIs will be ranked but not formally peer-reviewed. Accepted EOIs will be distributed among the mentees
+          and their COSIT 2026 mentors as a single PDF document. Doctoral mentees will also be encouraged to publish their
+          one-page PhD topic overviews (item 2 above) in a document that will be shared with all conference attendees and
+          archived via the Open Science Framework with the volume DOI.</br></p>
+
+        <p>Please <a
+            href="https://forms.gle/WXJzbrvwnzV3nTBr5" target="_blank">complete this form</a> to submit your Expression of Interest (EOI) to the Doctoral Mentoring Chair. Please direct any
+          questions regarding the doctoral mentoring programme to Dr. Crystal Bae at <a
+            href="mailto:cbae@uchicago.edu">cbae@uchicago.edu</a>.</br></p>
 
       </div>
     </section>
@@ -1284,7 +1323,7 @@
           <!-- Member 3 -->
           <div class="col-lg-4 col-md-5">
             <div class="member-info">
-              <h3>Themed Sessions Chair</h3>
+              <h3>Thematic Sessions Chair</h3>
               <a href="https://planning.gatech.edu/people/clio-andris" target="_blank">
                 <b>Clio Andris</b>
               </a>
@@ -1292,7 +1331,7 @@
               <span>Georgia Institute of Technology, USA</span>
             </div>
             <div class="member-info">
-              <h3>Doctoral Mentorship Chair</h3>
+              <h3>Doctoral Mentoring Chair</h3>
               <a href="https://spatial.uchicago.edu/directory/Crystal-Bae" target="_blank">
                 <b>Crystal Bae</b>
               </a>
