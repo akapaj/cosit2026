@@ -1723,8 +1723,9 @@ section,
 --------------------------------------------------------------*/
 .cta-register-btn {
   background-color: var(--accent-color);
+  transition: 0.3s;
 }
 
 .cta-register-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
