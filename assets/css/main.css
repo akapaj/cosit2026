@@ -1721,6 +1721,10 @@ section,
 /*--------------------------------------------------------------
 # Registration Section
 --------------------------------------------------------------*/
+.cta-register-btn {
+  background-color: var(--accent-color);
+}
+
 .cta-register-btn:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
