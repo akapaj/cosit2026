@@ -196,5 +196,16 @@
       heroImg.src = heroBackgrounds[randomIndex];
     }
   });
+  
+ /**
+   * Random page-title background (subpages)
+   */
+  window.addEventListener('load', () => {
+    const pageTitle = document.getElementById('page-title-bg');
+    if (pageTitle) {
+      const randomIndex = Math.floor(Math.random() * heroBackgrounds.length);
+      pageTitle.style.backgroundImage = `url('${heroBackgrounds[randomIndex]}')`;
+    }
+  });
 
 })();
