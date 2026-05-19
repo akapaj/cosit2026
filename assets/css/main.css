@@ -1729,3 +1729,16 @@ section,
 .cta-register-btn:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/*--------------------------------------------------------------
+# Sticky footer for subpages
+--------------------------------------------------------------*/
+body.speaker-details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.speaker-details-page main.main {
+  flex: 1 0 auto;
+}
