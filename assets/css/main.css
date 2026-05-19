@@ -990,6 +990,10 @@ section,
   --default-color: #ffffff;
 }
 
+.speakers .section-title {
+  --default-color: #2f3138;
+}
+
 .speakers .member {
   text-align: center;
   position: relative;
