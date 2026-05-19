@@ -991,7 +991,7 @@ section,
 }
 
 .speakers .section-title p {
-  --default-color: #2f3138;
+  color: #2f3138;
 }
 
 .speakers .member {
