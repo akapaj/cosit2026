@@ -990,7 +990,7 @@ section,
   --default-color: #ffffff;
 }
 
-.speakers .section-title {
+.speakers .section-title p {
   --default-color: #2f3138;
 }
 
