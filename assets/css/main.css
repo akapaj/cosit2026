@@ -1795,7 +1795,7 @@ body.speaker-details-page main.main {
   inset: auto;
   width: auto;
   height: auto;
-  max-height: 30px;
+  max-height: 40px;
   object-fit: contain;
   display: block;
   z-index: auto;
