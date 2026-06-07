@@ -1776,3 +1776,23 @@ body.speaker-details-page main.main {
   height: 100%;
   padding: 30px;
 }
+
+/* Hero sponsor logos */
+.hero .about-info .hero-sponsors a {
+  display: inline-block;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 0 8px 10px 0;
+  transition: 0.3s;
+}
+
+.hero .about-info .hero-sponsors a:hover {
+  transform: scale(1.05);
+}
+
+.hero .about-info .hero-sponsors img {
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
