@@ -1753,3 +1753,26 @@ body.speaker-details-page {
 body.speaker-details-page main.main {
   flex: 1 0 auto;
 }
+
+/* Sponsor section overrides */
+.sponsors .row {
+  border: none;
+}
+
+.sponsors .client-logo {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 5px;
+  background-color: var(--surface-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors .client-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
