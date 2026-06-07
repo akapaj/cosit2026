@@ -1792,7 +1792,12 @@ body.speaker-details-page main.main {
 }
 
 .hero .about-info .hero-sponsors img {
-  max-height: 40px;
+  position: static;
+  inset: auto;
   width: auto;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
   display: block;
+  z-index: auto;
 }
