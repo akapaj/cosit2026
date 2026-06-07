@@ -1804,7 +1804,11 @@ body.speaker-details-page main.main {
 
 /* Sponsor section logo size */
 .sponsors .client-logo img {
+  position: static;
+  inset: auto;
+  z-index: auto;
   max-height: 90px;
   width: auto;
+  height: auto;
   object-fit: contain;
 }
