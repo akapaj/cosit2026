@@ -1801,3 +1801,10 @@ body.speaker-details-page main.main {
   display: block;
   z-index: auto;
 }
+
+/* Sponsor section logo size */
+.sponsors .client-logo img {
+  max-height: 90px;
+  width: auto;
+  object-fit: contain;
+}
