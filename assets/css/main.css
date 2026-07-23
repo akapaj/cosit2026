@@ -1802,7 +1802,7 @@ body.speaker-details-page main.main {
   inset: auto;
   width: auto;
   height: auto;
-  max-height: 35px;
+  max-height: 50px;
   max-width: 100%;
   object-fit: contain;
   display: block;
