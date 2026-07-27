@@ -96,256 +96,322 @@
         </div>
     </header>
 
-<main class="main">
+    <main class="main">
 
-      <!-- Page Title -->
-  <div id="page-title-bg" class="page-title" data-aos="fade"
-       style="background-image: url('assets/img/york-bg1.jpg');">
-    <div class="container position-relative">
-      <h1>Preliminary Schedule</h1>
-      <p>An overview of the four conference days. Details are subject to change.</p>
-    </div>
-  </div>
+        <!-- Page Title -->
+        <div id="page-title-bg" class="page-title" data-aos="fade"
+            style="background-image: url('assets/img/york-bg1.jpg');">
+            <div class="container position-relative">
+                <h1>Preliminary Schedule</h1>
+                <p>An overview of the four conference days. Details are subject to change.</p>
+            </div>
+        </div>
 
-  <section id="schedule" class="section">
-    <style>
-      #schedule .schedule-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; }
-      #schedule table.cosit-schedule {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 3px;
-        font-size: 0.85rem;
-        table-layout: fixed;
-        min-width: 760px;
-      }
-      #schedule .cosit-schedule th,
-      #schedule .cosit-schedule td {
-        padding: 8px 10px;
-        vertical-align: middle;
-        border-radius: 5px;
-        line-height: 1.3;
-      }
-      #schedule .cosit-schedule thead th {
-        background: var(--heading-color);
-        color: #fff;
-        font-family: var(--heading-font);
-        text-align: center;
-        font-weight: 600;
-      }
-      #schedule .cosit-schedule .time-col {
-        background: #f2f2f3;
-        color: var(--heading-color);
-        font-weight: 600;
-        text-align: center;
-        width: 78px;
-        white-space: nowrap;
-      }
-      #schedule .cosit-schedule td.empty { background: transparent; }
-      #schedule .ev-paper    { background: #dbe4f5; color: #0e1b4d; }
-      #schedule .ev-keynote  { background: #d7ecdd; color: #12492a; }
-      #schedule .ev-break    { background: #f7dde4; color: #7a1730; }
-      #schedule .ev-thematic { background: #e8def2; color: #3d2a5c; }
-      #schedule .ev-social   { background: #e8def2; color: #3d2a5c; }
-      #schedule .ev-evening  { background: #fce4d0; color: #7a3d10; }
-      #schedule .ev-highlight{ background: #fdf0cc; color: #6b5410; }
-      #schedule .cosit-schedule td strong { display: block; font-weight: 600; }
-      #schedule .cosit-schedule td .sub {
-        font-style: italic; font-weight: 400; font-size: 0.8rem;
-        display: block; margin-top: 3px;
-      }
-      #schedule .legend {
-        max-width: 1100px; margin: 18px auto 0; display: flex; flex-wrap: wrap;
-        gap: 14px; justify-content: center; font-size: 0.8rem;
-      }
-      #schedule .legend span { display: inline-flex; align-items: center; gap: 6px; }
-      #schedule .legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
-    </style>
+        <section id="schedule" class="section">
+            <style>
+                #schedule .schedule-wrap {
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    overflow-x: auto;
+                }
 
-    <!-- <div class="container section-title" data-aos="fade-up">
+                #schedule table.cosit-schedule {
+                    width: 100%;
+                    border-collapse: separate;
+                    border-spacing: 3px;
+                    font-size: 0.85rem;
+                    table-layout: fixed;
+                    min-width: 760px;
+                }
+
+                #schedule .cosit-schedule th,
+                #schedule .cosit-schedule td {
+                    padding: 8px 10px;
+                    vertical-align: middle;
+                    border-radius: 5px;
+                    line-height: 1.3;
+                }
+
+                #schedule .cosit-schedule thead th {
+                    background: var(--heading-color);
+                    color: #fff;
+                    font-family: var(--heading-font);
+                    text-align: center;
+                    font-weight: 600;
+                }
+
+                #schedule .cosit-schedule .time-col {
+                    background: #f2f2f3;
+                    color: var(--heading-color);
+                    font-weight: 600;
+                    text-align: center;
+                    width: 78px;
+                    white-space: nowrap;
+                }
+
+                #schedule .cosit-schedule td.empty {
+                    background: transparent;
+                }
+
+                #schedule .ev-paper {
+                    background: #dbe4f5;
+                    color: #0e1b4d;
+                }
+
+                #schedule .ev-keynote {
+                    background: #d7ecdd;
+                    color: #12492a;
+                }
+
+                #schedule .ev-break {
+                    background: #f7dde4;
+                    color: #7a1730;
+                }
+
+                #schedule .ev-thematic {
+                    background: #e8def2;
+                    color: #3d2a5c;
+                }
+
+                #schedule .ev-social {
+                    background: #fce4d0;
+                    color: #7a3d10;
+                }
+
+                #schedule .ev-evening {
+                    background: #fce4d0;
+                    color: #7a3d10;
+                }
+
+                #schedule .ev-highlight {
+                    background: #fdf0cc;
+                    color: #6b5410;
+                }
+
+                #schedule .cosit-schedule td strong {
+                    display: block;
+                    font-weight: 600;
+                }
+
+                #schedule .cosit-schedule td .sub {
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 0.8rem;
+                    display: block;
+                    margin-top: 3px;
+                }
+
+                #schedule .legend {
+                    max-width: 1100px;
+                    margin: 18px auto 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 14px;
+                    justify-content: center;
+                    font-size: 0.8rem;
+                }
+
+                #schedule .legend span {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                #schedule .legend i {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 3px;
+                    display: inline-block;
+                }
+            </style>
+
+            <!-- <div class="container section-title" data-aos="fade-up">
       <h2>Preliminary Schedule<br></h2>
       <p>An overview of the four conference days. Details are subject to change.</p>
     </div> -->
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-      <div class="schedule-wrap">
-        <table class="cosit-schedule">
-          <thead>
-            <tr>
-              <th class="time-col">Start</th>
-              <th>Tuesday<br>22 Sep</th>
-              <th>Wednesday<br>23 Sep</th>
-              <th>Thursday<br>24 Sep</th>
-              <th>Friday<br>25 Sep</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="time-col">09:00</td>
-              <td class="ev-highlight">Welcome</td>
-              <td class="ev-paper" rowspan="3">Paper Session 4</td>
-              <td class="ev-paper" rowspan="3">Paper Session 6</td>
-              <td class="ev-paper" rowspan="3">Paper Session 7</td>
-            </tr>
-            <tr>
-              <td class="time-col">09:30</td>
-              <td class="ev-paper" rowspan="2">Paper Session 1</td>
-            </tr>
-            <tr>
-              <td class="time-col">10:00</td>
-            </tr>
-            <tr>
-              <td class="time-col">10:30</td>
-              <td class="ev-break">Coffee Break</td>
-              <td class="ev-break">Coffee Break</td>
-              <td class="ev-break">Coffee Break</td>
-              <td class="ev-break">Coffee Break</td>
-            </tr>
-            <tr>
-              <td class="time-col">11:00</td>
-              <td class="ev-paper" rowspan="3">Paper Session 2</td>
-              <td class="ev-thematic" rowspan="3">
-                <strong>Thematic Sessions (in parallel)</strong>
-                <span class="sub">1) Indoor-vs-Outdoor Spatial Information</span>
-                <span class="sub">2) Spatial Information Theory, Spatial Cognition, and Spatial-HCI? What, Why, and Why now?</span>
-              </td>
-              <td class="ev-thematic" rowspan="3">
-                <strong>Thematic Sessions (in parallel)</strong>
-                <span class="sub">1) Leveraging Geospatial Innovation for Safeability</span>
-                <span class="sub">2) Generated Geography: Responsible GeoAI in the Era of Foundation Models</span>
-              </td>
-              <td class="ev-paper" rowspan="2">Paper Session 8</td>
-            </tr>
-            <tr>
-              <td class="time-col">11:30</td>
-            </tr>
-            <tr>
-              <td class="time-col">12:00</td>
-              <td class="ev-highlight">Awards and Closing</td>
-            </tr>
-            <tr>
-              <td class="time-col">12:30</td>
-              <td class="ev-break" rowspan="3">Lunch Break</td>
-              <td class="ev-break" rowspan="2">Lunch Break</td>
-              <td class="ev-break" rowspan="3">Lunch Break</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">13:00</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">13:30</td>
-              <td class="ev-keynote" rowspan="2">Keynote Session<br>Laura Alessandretti</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">14:00</td>
-              <td class="ev-keynote" rowspan="2">Keynote Session<br>Krzysztof Janowicz</td>
-              <td class="ev-keynote" rowspan="2">Keynote Session<br>Hugo Spiers</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">14:30</td>
-              <td class="ev-paper" rowspan="2">Paper Session 5</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">15:00</td>
-              <td class="ev-break">Coffee Break</td>
-              <td class="ev-break">Coffee Break</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">15:30</td>
-              <td class="ev-paper" rowspan="3">Paper Session 3</td>
-              <td class="ev-social" rowspan="5">Social Activities</td>
-              <td class="ev-paper" rowspan="3">Doctoral Mentoring Programme Session</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">16:00</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">16:30</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">17:00</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">17:30</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">18:00</td>
-              <td class="ev-evening" rowspan="4">Icebreaker<br>York Art Gallery</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">18:30</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">19:00</td>
-              <td class="empty"></td>
-              <td class="ev-evening" rowspan="6">Banquet<br>National Railway Museum</td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">19:30</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">20:00</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">20:30</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">21:00</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-            <tr>
-              <td class="time-col">21:30</td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-              <td class="empty"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="schedule-wrap">
+                    <table class="cosit-schedule">
+                        <thead>
+                            <tr>
+                                <th class="time-col">Start</th>
+                                <th>Tuesday<br>22 Sep</th>
+                                <th>Wednesday<br>23 Sep</th>
+                                <th>Thursday<br>24 Sep</th>
+                                <th>Friday<br>25 Sep</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-col">09:00</td>
+                                <td class="ev-highlight">Welcome</td>
+                                <td class="ev-paper" rowspan="3">Paper Session 4</td>
+                                <td class="ev-paper" rowspan="3">Paper Session 6</td>
+                                <td class="ev-paper" rowspan="3">Paper Session 7</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">09:30</td>
+                                <td class="ev-paper" rowspan="2">Paper Session 1</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">10:30</td>
+                                <td class="ev-break">Coffee Break</td>
+                                <td class="ev-break">Coffee Break</td>
+                                <td class="ev-break">Coffee Break</td>
+                                <td class="ev-break">Coffee Break</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">11:00</td>
+                                <td class="ev-paper" rowspan="3">Paper Session 2</td>
+                                <td class="ev-thematic" rowspan="3">
+                                    <strong>Thematic Sessions (in parallel)</strong>
+                                    <span class="sub">1) Indoor-vs-Outdoor Spatial Information</span>
+                                    <span class="sub">2) Spatial Information Theory, Spatial Cognition, and Spatial-HCI?
+                                        What, Why, and Why now?</span>
+                                </td>
+                                <td class="ev-thematic" rowspan="3">
+                                    <strong>Thematic Sessions (in parallel)</strong>
+                                    <span class="sub">3) Leveraging Geospatial Innovation for Safeability</span>
+                                    <span class="sub">4) Generated Geography: Responsible GeoAI in the Era of Foundation
+                                        Models</span>
+                                </td>
+                                <td class="ev-paper" rowspan="2">Paper Session 8</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">11:30</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">12:00</td>
+                                <td class="ev-highlight">Awards and Closing</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">12:30</td>
+                                <td class="ev-break" rowspan="3">Lunch Break</td>
+                                <td class="ev-break" rowspan="2">Lunch Break</td>
+                                <td class="ev-break" rowspan="3">Lunch Break</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">13:00</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">13:30</td>
+                                <td class="ev-keynote" rowspan="2">Keynote Session - Laura Alessandretti</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">14:00</td>
+                                <td class="ev-keynote" rowspan="2">Keynote Session - Krzysztof Janowicz</td>
+                                <td class="ev-keynote" rowspan="2">Keynote Session - Hugo Spiers</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">14:30</td>
+                                <td class="ev-paper" rowspan="2">Paper Session 5</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">15:00</td>
+                                <td class="ev-break">Coffee Break</td>
+                                <td class="ev-break">Coffee Break</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">15:30</td>
+                                <td class="ev-paper" rowspan="3">Paper Session 3</td>
+                                <td class="ev-social" rowspan="5">Social Activities</td>
+                                <td class="ev-paper" rowspan="3">Doctoral Mentoring Programme Session</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">16:00</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">16:30</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">17:00</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">17:30</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">18:00</td>
+                                <td class="ev-evening" rowspan="4">Icebreaker - York Art Gallery</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">18:30</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">19:00</td>
+                                <td class="empty"></td>
+                                <td class="ev-evening" rowspan="6">Banquet - National Railway Museum</td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">19:30</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">20:00</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">20:30</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">21:00</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">21:30</td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                                <td class="empty"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-      <div class="legend">
-        <span><i style="background:#dbe4f5"></i>Paper Sessions</span>
-        <span><i style="background:#d7ecdd"></i>Keynotes</span>
-        <span><i style="background:#e8def2"></i>Thematic / Social</span>
-        <span><i style="background:#f7dde4"></i>Breaks</span>
-        <span><i style="background:#fce4d0"></i>Evening Events</span>
-        <span><i style="background:#fdf0cc"></i>Welcome / Closing</span>
-      </div>
-    </div>
-  </section>
+                <div class="legend">
+                    <span><i style="background:#dbe4f5"></i>Paper Sessions</span>
+                    <span><i style="background:#d7ecdd"></i>Keynotes</span>
+                    <span><i style="background:#e8def2"></i>Thematic Sessions</span>
+                    <span><i style="background:#f7dde4"></i>Breaks</span>
+                    <span><i style="background:#fce4d0"></i>Social &amp; Evening Events</span>
+                    <span><i style="background:#fdf0cc"></i>Welcome / Closing</span>
+                </div>
+            </div>
+        </section>
 
-</main>
+    </main>
 
     <footer id="footer" class="footer dark-background">
 
@@ -362,7 +428,8 @@
                         <!-- You can delete the links only if you purchased the pro version. -->
                         <!-- Licensing information: https://bootstrapmade.com/license/ -->
                         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-                        Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a>
+                        Designed by <a href="https://bootstrapmade.com/" target="_blank"
+                            rel="noopener noreferrer">BootstrapMade</a>
                     </div>
                 </div>
 
