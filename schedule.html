@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>The 17th Conference on Spatial Information Theory (COSIT 2026)</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/cosit2026_logo.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: TheEvent
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="speaker-details-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+            <a href="/" class="logo d-flex align-items-center me-auto">
+                <!-- <img src="assets/img/logo_cosit.png" alt=""> -->
+                <h1 class="d-flex align-items-center"><img src='assets/img/logo.png'>&nbsp;COSIT 2026</h1>
+                <!-- Uncomment the line below if you also wish to use an text logo -->
+                <!-- <h1 class="sitename">TheEvent</h1>  -->
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/" class="active">Home<br></a></li>
+                    <!-- <li><a href="schedule.html">Schedule</a></li> -->
+                    <li class="dropdown"><a href="#"><span>Participation</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/#speakers">Keynote Speakers</a></li>
+                            <li><a href="/#cfp">Call for Papers</a></li>
+                            <li><a href="/#submissions">Submissions</a></li>
+                            <li><a href="/#thematic">Thematic Sessions</a></li>
+                            <li><a href="/#doctoral">Doctoral Mentoring Programme</a></li>
+                            <li><a href="/#dates">Important Dates</a></li>
+                            <li><a href="/#register">Registration</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>Location</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/#york">York</a></li>
+                            <li><a href="/#venue">Conference Venue</a></li>
+                            <li><a href="/#transport">Transportation</a></li>
+                            <li><a href="/#hotels">Accommodations</a></li>
+                            <li><a href="/#visa">Visa Information</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>Organization</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/#org-com">Organizing Committee</a></li>
+                            <li><a href="/#pro-com">Programme Committee</a></li>
+                            <li><a href="/#sponsors">Sponsors</a></li>
+                            <li><a href="https://geosensor.net/cositseries/" target="_blank">Conference Series</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li class="d-xl-none"><a class="cta-btn" href="/#register">Registration</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="cta-btn d-none d-xl-block" href="/#register">Registration</a>
+
+        </div>
+    </header>
+
+<main class="main">
+
+  <section id="schedule" class="section">
+    <style>
+      #schedule .schedule-wrap { max-width: 1100px; margin: 0 auto; overflow-x: auto; }
+      #schedule table.cosit-schedule {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 3px;
+        font-size: 0.85rem;
+        table-layout: fixed;
+        min-width: 760px;
+      }
+      #schedule .cosit-schedule th,
+      #schedule .cosit-schedule td {
+        padding: 8px 10px;
+        vertical-align: middle;
+        border-radius: 5px;
+        line-height: 1.3;
+      }
+      #schedule .cosit-schedule thead th {
+        background: var(--heading-color);
+        color: #fff;
+        font-family: var(--heading-font);
+        text-align: center;
+        font-weight: 600;
+      }
+      #schedule .cosit-schedule .time-col {
+        background: #f2f2f3;
+        color: var(--heading-color);
+        font-weight: 600;
+        text-align: center;
+        width: 78px;
+        white-space: nowrap;
+      }
+      #schedule .cosit-schedule td.empty { background: transparent; }
+      #schedule .ev-paper    { background: #dbe4f5; color: #0e1b4d; }
+      #schedule .ev-keynote  { background: #d7ecdd; color: #12492a; }
+      #schedule .ev-break    { background: #f7dde4; color: #7a1730; }
+      #schedule .ev-thematic { background: #e8def2; color: #3d2a5c; }
+      #schedule .ev-social   { background: #e8def2; color: #3d2a5c; }
+      #schedule .ev-evening  { background: #fce4d0; color: #7a3d10; }
+      #schedule .ev-highlight{ background: #fdf0cc; color: #6b5410; }
+      #schedule .cosit-schedule td strong { display: block; font-weight: 600; }
+      #schedule .cosit-schedule td .sub {
+        font-style: italic; font-weight: 400; font-size: 0.8rem;
+        display: block; margin-top: 3px;
+      }
+      #schedule .legend {
+        max-width: 1100px; margin: 18px auto 0; display: flex; flex-wrap: wrap;
+        gap: 14px; justify-content: center; font-size: 0.8rem;
+      }
+      #schedule .legend span { display: inline-flex; align-items: center; gap: 6px; }
+      #schedule .legend i { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+    </style>
+
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Preliminary Schedule<br></h2>
+      <p>An overview of the four conference days. Details are subject to change.</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="schedule-wrap">
+        <table class="cosit-schedule">
+          <thead>
+            <tr>
+              <th class="time-col">Start</th>
+              <th>Tuesday<br>22 Sep</th>
+              <th>Wednesday<br>23 Sep</th>
+              <th>Thursday<br>24 Sep</th>
+              <th>Friday<br>25 Sep</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-col">09:00</td>
+              <td class="ev-highlight">Welcome</td>
+              <td class="ev-paper" rowspan="3">Paper Session 4</td>
+              <td class="ev-paper" rowspan="3">Paper Session 6</td>
+              <td class="ev-paper" rowspan="3">Paper Session 7</td>
+            </tr>
+            <tr>
+              <td class="time-col">09:30</td>
+              <td class="ev-paper" rowspan="2">Paper Session 1</td>
+            </tr>
+            <tr>
+              <td class="time-col">10:00</td>
+            </tr>
+            <tr>
+              <td class="time-col">10:30</td>
+              <td class="ev-break">Coffee Break</td>
+              <td class="ev-break">Coffee Break</td>
+              <td class="ev-break">Coffee Break</td>
+              <td class="ev-break">Coffee Break</td>
+            </tr>
+            <tr>
+              <td class="time-col">11:00</td>
+              <td class="ev-paper" rowspan="3">Paper Session 2</td>
+              <td class="ev-thematic" rowspan="3">
+                <strong>Thematic Sessions (in parallel)</strong>
+                <span class="sub">1) Indoor-vs-Outdoor Spatial Information</span>
+                <span class="sub">2) Spatial Information Theory, Spatial Cognition, and Spatial-HCI? What, Why, and Why now?</span>
+              </td>
+              <td class="ev-thematic" rowspan="3">
+                <strong>Thematic Sessions (in parallel)</strong>
+                <span class="sub">1) Leveraging Geospatial Innovation for Safeability</span>
+                <span class="sub">2) Generated Geography: Responsible GeoAI in the Era of Foundation Models</span>
+              </td>
+              <td class="ev-paper" rowspan="2">Paper Session 8</td>
+            </tr>
+            <tr>
+              <td class="time-col">11:30</td>
+            </tr>
+            <tr>
+              <td class="time-col">12:00</td>
+              <td class="ev-highlight">Awards and Closing</td>
+            </tr>
+            <tr>
+              <td class="time-col">12:30</td>
+              <td class="ev-break" rowspan="3">Lunch Break</td>
+              <td class="ev-break" rowspan="2">Lunch Break</td>
+              <td class="ev-break" rowspan="3">Lunch Break</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">13:00</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">13:30</td>
+              <td class="ev-keynote" rowspan="2">Keynote Session<br>Laura Alessandretti</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">14:00</td>
+              <td class="ev-keynote" rowspan="2">Keynote Session<br>Krzysztof Janowicz</td>
+              <td class="ev-keynote" rowspan="2">Keynote Session<br>Hugo Spiers</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">14:30</td>
+              <td class="ev-paper" rowspan="2">Paper Session 5</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">15:00</td>
+              <td class="ev-break">Coffee Break</td>
+              <td class="ev-break">Coffee Break</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">15:30</td>
+              <td class="ev-paper" rowspan="3">Paper Session 3</td>
+              <td class="ev-social" rowspan="5">Social Activities</td>
+              <td class="ev-paper" rowspan="3">Doctoral Mentoring Programme Session</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">16:00</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">16:30</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">17:00</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">17:30</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">18:00</td>
+              <td class="ev-evening" rowspan="4">Icebreaker<br>York Art Gallery</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">18:30</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">19:00</td>
+              <td class="empty"></td>
+              <td class="ev-evening" rowspan="6">Banquet<br>National Railway Museum</td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">19:30</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">20:00</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">20:30</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">21:00</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+            <tr>
+              <td class="time-col">21:30</td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="legend">
+        <span><i style="background:#dbe4f5"></i>Paper Sessions</span>
+        <span><i style="background:#d7ecdd"></i>Keynotes</span>
+        <span><i style="background:#e8def2"></i>Thematic / Social</span>
+        <span><i style="background:#f7dde4"></i>Breaks</span>
+        <span><i style="background:#fce4d0"></i>Evening Events</span>
+        <span><i style="background:#fdf0cc"></i>Welcome / Closing</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+    <footer id="footer" class="footer dark-background">
+
+        <div class="copyright text-center">
+            <div
+                class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+                <div class="d-flex flex-column align-items-center align-items-lg-start">
+                    <div>
+                        © Copyright <strong><span>COSIT 2026</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+                        Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a>
+                    </div>
+                </div>
+
+                <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                    <a href="https://www.linkedin.com/company/cosit2026/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
