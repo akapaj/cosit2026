@@ -1826,3 +1826,52 @@ body.speaker-details-page main.main {
 .sponsors .client-logo:hover img {
   transform: scale(1.05);
 }
+
+=== STEP 1: Add this CSS to the end of your main.css ===
+
+/*--------------------------------------------------------------
+# Accepted Papers Section (contribution items)
+--------------------------------------------------------------*/
+#papers .contrib-item {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 5px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background-color: var(--surface-color);
+}
+
+#papers .contrib-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: var(--heading-color);
+  line-height: 1.4;
+}
+
+#papers .contrib-title a {
+  color: var(--heading-color);
+  text-decoration: none;
+}
+
+#papers .contrib-title a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+#papers .contrib-authors {
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+  color: var(--default-color);
+}
+
+#papers .award-intro {
+  max-width: 760px;
+  margin: 0 auto 24px;
+}
+
+#papers .award-group-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+}
