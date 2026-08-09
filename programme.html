@@ -100,496 +100,1226 @@
 
     <main class="main">
 
-                <!-- Page Title -->
+        <!-- Page Title -->
         <div id="page-title-bg" class="page-title" data-aos="fade"
             style="background-image: url('assets/img/york-bg1.jpg');">
             <div class="container position-relative">
                 <h1>Conference Programme</h1>
-                <p>There might be slight changes to the programme up until the start of the conference. Please check back regularly for updates.</p>
+                <p>There might be slight changes to the programme up until the start of the conference. Please check
+                    back regularly for updates.</p>
             </div>
         </div>
 
-<!-- Programme Section -->
-    <section id="programme" class="schedule faq section">
-      <style>
-        #programme .nav-tabs .nav-item { margin-bottom: 10px; }
-        #programme .prog-daytime {
-          display: inline-block;
-          font-size: 13px;
-          font-weight: 600;
-          color: var(--accent-color);
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          margin-bottom: 4px;
-        }
-        #programme .faq-item h3 { line-height: 1.4; }
-        #programme .prog-papers { display: flex; flex-direction: column; gap: 4px; }
-        #programme .prog-paper {
-          display: flex;
-          gap: 14px;
-          padding: 14px 0;
-          border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-        }
-        #programme .prog-paper:first-child { border-top: 0; }
-        #programme .prog-type {
-          flex: 0 0 auto;
-          width: 34px;
-          height: 34px;
-          border-radius: 50%;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 16px;
-          color: #fff;
-        }
-        #programme .ptype-full { background-color: #0e1b4d; }
-        #programme .ptype-short { background-color: #3a7ca5; }
-        #programme .ptype-journal { background-color: #f82249; }
-        #programme .prog-paper-body { flex: 1 1 auto; }
-        #programme .prog-title {
-          font-size: 16px;
-          font-weight: 700;
-          color: var(--heading-color);
-          margin: 0 0 3px 0;
-          line-height: 1.4;
-        }
-        #programme .prog-authors { font-size: 14px; margin: 0; color: var(--default-color); }
-        #programme .prog-legend {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          justify-content: center;
-          margin: 0 auto 30px;
-          font-size: 14px;
-        }
-        #programme .prog-legend span { display: inline-flex; align-items: center; gap: 8px; }
-        #programme .prog-legend .prog-type { width: 26px; height: 26px; font-size: 13px; }
-      </style>
+        <!-- Programme Section -->
+        <section id="programme" class="schedule faq section">
+            <style>
+                /* Same fix already applied to #papers: nav-tabs wrap onto two lines
+           with 5 long day labels and need vertical spacing between rows. */
+                #programme .nav-tabs .nav-item {
+                    margin-bottom: 10px;
+                }
+            </style>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Programme<br></h2>
-        <p>The detailed session programme for COSIT 2026. Select a day and expand a session to see its papers.</p>
-      </div>
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Programme<br></h2>
+                <p>The detailed session programme for COSIT 2026. Sessions marked with <i
+                        class="bi bi-chevron-right"></i> expand to show their papers.</p>
+            </div>
 
-      <div class="container">
+            <div class="container">
 
-        <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
-          <li class="nav-item"><a class="nav-link active" href="#" data-day="all" role="tab">All Days</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-day="tue" role="tab">Tuesday (Sept. 22)</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-day="wed" role="tab">Wednesday (Sept. 23)</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-day="thu" role="tab">Thursday (Sept. 24)</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" data-day="fri" role="tab">Friday (Sept. 25)</a></li>
-        </ul>
+                <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#day-all" role="tab" data-bs-toggle="tab">All Days</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#day-tue" role="tab" data-bs-toggle="tab">Tuesday (Sept. 22)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#day-wed" role="tab" data-bs-toggle="tab">Wednesday (Sept. 23)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#day-thu" role="tab" data-bs-toggle="tab">Thursday (Sept. 24)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#day-fri" role="tab" data-bs-toggle="tab">Friday (Sept. 25)</a>
+                    </li>
+                </ul>
 
-        <div class="prog-legend" data-aos="fade-up" data-aos-delay="150">
-          <span><span class="prog-type ptype-full"><i class="bi bi-file-earmark-text-fill"></i></span> Full Paper</span>
-          <span><span class="prog-type ptype-short"><i class="bi bi-file-earmark-fill"></i></span> Short Paper</span>
-          <span><span class="prog-type ptype-journal"><i class="bi bi-journal-bookmark-fill"></i></span> Journal Article</span>
-        </div>
+                <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-10">
-            <div class="faq-container">
-            <div class="faq-item" data-day="tue">
-              <h3><span class="prog-daytime">Tuesday · 09:30 – 10:30</span><br>Session 1: Geospatial Semantics</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">From Markers to Meaning: A Cognitive–Symbolic Model of Cultural Placemaking</h5>
-                    <p class="prog-authors"><em>Maria Carolina Quintana Noriega, Christophe Claramunt</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">When are geographic quantities semantically compatible with each other? Towards a constructive theory of amounts, magnitudes, and proportions</h5>
-                    <p class="prog-authors"><em>Simon Scheider, Shuai Wang, Eric Jacob Top</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Through and Through: corpus-based semantic analysis of a spatial preposition</h5>
-                    <p class="prog-authors"><em>Brandon Bennett, Maria M Hedblom</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Towards a statistical approach to humanistic-geographical place concepts</h5>
-                    <p class="prog-authors"><em>René Westerholt</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="tue">
-              <h3><span class="prog-daytime">Tuesday · 11:00 – 12:30</span><br>Session 2: Spatial Cognition</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Mapping Cycling Experience in Valence-Arousal Space: A Geometric Approach to Appraisal Heterogeneity</h5>
-                    <p class="prog-authors"><em>Ayda Grisiute, Johanna Wörle, Panagiotis Mavros, Martin Raubal</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Cognition and Computation of Minimal Viewpoints for Understanding Building Layouts</h5>
-                    <p class="prog-authors"><em>Ahmed Aly, Jakub Krukar</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Habitual use of navigation systems impairs spatial learning depending on navigation strategy</h5>
-                    <p class="prog-authors"><em>Qi Ying , Christopher Hilton, Sara Fabrikant</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Capturing Environmental-Scale Spatial Cognition in Applied Settings: A Field-Based Pilot with Firefighters</h5>
-                    <p class="prog-authors"><em>Chelsie McWhorter, Kathy Baylis, Mary Hegarty</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Context-sensitive Spatial Deixis through the Lens of Mental Models</h5>
-                    <p class="prog-authors"><em>Adwitiya Mandal, Zoe Falomir, Kai-Florian Richter</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Visual attention allocation between social and navigational cues during wayfinding</h5>
-                    <p class="prog-authors"><em>Gökçe Orlu Özen, Çağrı Imamoğlu, Elif Surer, Burçak Altay</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="tue">
-              <h3><span class="prog-daytime">Tuesday · 15:30 – 17:00</span><br>Session 3: Language and Foundation Models</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">On Spatial Reasoning and Perspective Transformation in Language Models</h5>
-                    <p class="prog-authors"><em>Haotong Zhang, Ian Pratt-Hartmann</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">LMM Modality Transfer: a Pre-requisite for Autonomous GIS Agents</h5>
-                    <p class="prog-authors"><em>Ivan Majic, Zexian Huang, Franziska Hübl, Krzysztof Janowicz, Meilin Shi, Mina Karimi, Zilong Liu, Alexandra Fortacz</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Structuring the Underwater Environment: A Taxonomy of Aquatic Landmarks</h5>
-                    <p class="prog-authors"><em>Eva Nuhn, Sabine Timpf</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Conceptual Vagueness as Humans and LLMs Represent: Evidence from Migration Distance Categorization</h5>
-                    <p class="prog-authors"><em>Songlin Wang, Krzysztof Janowicz, Ailin Benitez Cortes, Marion Borderon, Yingjing Huang, Mina Karimi, Zilong Liu, Annika Süß, Patrick Sakdapolrak</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">GeoKG for GeoFM: Neuro-Symbolic Integration of Semantically-enriched Geospatial-Temporal Data</h5>
-                    <p class="prog-authors"><em>Kai Moltzen, Debayan Banerjee, Julian Burmester, Anna Ehrenberg, Martin Kohler, Cedric Möller, Jann Pfeifer, Tilahun Abedissa Taffa, Hanna Marlene Schulz, Aida Usmanova, Patrick Westphal, Ricardo Usbeck</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Golden Gate Bridge, as Always? Eliciting Prototypical Places From Autoregressive Large Language Models via Category Production</h5>
-                    <p class="prog-authors"><em>Zilong Liu, Krzysztof Janowicz, Mina Karimi, Meilin Shi, Ivan Majic, Alexandra Fortacz-Lazan</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="wed">
-              <h3><span class="prog-daytime">Wednesday · 09:00 – 10:30</span><br>Session 4: Spatial Analysis and Modeling</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">An Operator Framework for Real-time Analytics of Streamed Fields</h5>
-                    <p class="prog-authors"><em>JJ Paul, Silvia Nittel</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">From Feature Attribution to Spatial Information Structure: Interpreting Urban Pedestrian Flows with Explainable AI</h5>
-                    <p class="prog-authors"><em>Atakilti Kiros, Yuri Ribakov, Israel Klein, Achituv Cohen</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Spatiotemporal Adaptive Learning for Flow-based Graph Neural Networks</h5>
-                    <p class="prog-authors"><em>Fengjiao Li, Meiliu Wu, Ana Basiri</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">The Same Street, Different Safety Judgments: Evaluative Context Effects in Daytime and Nighttime Street View Imagery</h5>
-                    <p class="prog-authors"><em>Tong Qin, Nico Van de Weghe, Wim Fias, Haosheng Huang</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Decision-Making Under Uncertainty in Tsunami Evacuation: Individual Differences in Information Consultation and Risk Perception</h5>
-                    <p class="prog-authors"><em>Shota Iwama, Sihwan Lee, Hong Hu, Takanori Nanahara</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Learning street view representations based on a spatiotemporal contrastive learning framework</h5>
-                    <p class="prog-authors"><em>Yong Li, Yingjing Huang, and Fan Zhang</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="wed">
-              <h3><span class="prog-daytime">Wednesday · 14:30 – 15:30</span><br>Session 5: Spatial Search</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Much of Geospatial Web Search Is Beyond Traditional GIS</h5>
-                    <p class="prog-authors"><em>Ilya Ilyankou, Stefano Cavazzi, James Haworth</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Georeferencing Non-Gazetteered Place Names using Biological Specimen Records</h5>
-                    <p class="prog-authors"><em>Aneesha Fernando, Surangika Ranathunga, Kristin Stock, Raj Prasanna, Christopher B. Jones</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Document Geocoding for Inferring Spatial Familiarity within Reddit text</h5>
-                    <p class="prog-authors"><em>Paddy Smith, Ed Manley, Myles Gould</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Comparing thematic and search term-based coding in understanding sense of place in survey research</h5>
-                    <p class="prog-authors"><em>Cotton, Isabel, Brooke McWherter, Thora Tenbrink, and Kate Sherren</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="thu">
-              <h3><span class="prog-daytime">Thursday · 09:00 – 10:30</span><br>Session 6: Navigation and Wayfinding I</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Extending ISO-Space to Annotate Spatial Information in Route Descriptions</h5>
-                    <p class="prog-authors"><em>Samira Goudarzi Ali Akbari, Stephan Winter, Martin Tomko</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Mapinou: a Game to Assess the Skill of Using Pan-Scalar Maps</h5>
-                    <p class="prog-authors"><em>Justin Berli, Guillaume Touya</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Learning a map under positive emotions: How self-reported arousal and individual differences relate to route and survey knowledge</h5>
-                    <p class="prog-authors"><em>Veronica Muffato</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Representing Retail Wayfinding: A Requirement-Driven Study Design for Non-Visual Supermarket Navigation</h5>
-                    <p class="prog-authors"><em>Xiang Zhou, Sabine Timpf</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Simulating Path Integration with Continuous Attractor Neural Networks</h5>
-                    <p class="prog-authors"><em>Yulin Wu, Ed Manley</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Feeling the heat? Heat stress impairs landmark but not route knowledge in a VR navigation task</h5>
-                    <p class="prog-authors"><em>Alessandro J. Pierro, Sara Fabrikant, Armand Kapaj</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Beyond urban form: Introducing dynamic factors in agent-based simulations of pedestrian movement</h5>
-                    <p class="prog-authors"><em>Marcin Wozniak, Gabriele Filomena</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="fri">
-              <h3><span class="prog-daytime">Friday · 09:00 – 10:30</span><br>Session 7: Qualitative Spatial Reasoning</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Qualitative Space of Material Documents</h5>
-                    <p class="prog-authors"><em>Mark Bell, John G. Stell</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">RCC-8 as a Benchmark for Diagrammatic Reasoning in Multimodal Foundation Models</h5>
-                    <p class="prog-authors"><em>Robert E. Blackwell, Anthony G Cohn</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-full" title="Full Paper"><i class="bi bi-file-earmark-text-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">An Extended Qualitative Model for Reasoning about 3D Objects using Depth and Different Perspectives</h5>
-                    <p class="prog-authors"><em>Martí Ejarque, Zoe Falomir</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">From Trajectories to Relations: Interpreting Overtake Manoeuvres with Large Language Models and Qualitative Spatial Representations</h5>
-                    <p class="prog-authors"><em>Jana Verdoodt, Changbo Zhang, Lars De Sloover, Nico Van de Weghe, Haosheng Huang</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Limits of Spatial Reasoning using LLMs</h5>
-                    <p class="prog-authors"><em>Varis Ithivatana, Brandon Bennett</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">A Cross-Linguistic Evaluation of Cardinal Direction Reasoning in LLMs</h5>
-                    <p class="prog-authors"><em>Panagiota Gyftou, Robert E. Blackwell, Manolis Koubarakis, Anthony G Cohn</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            <div class="faq-item" data-day="fri">
-              <h3><span class="prog-daytime">Friday · 11:00 – 12:00</span><br>Session 8: Navigation and Wayfinding II</h3>
-              <div class="faq-content">
-                <div class="prog-papers">
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">From sequential decisions to concurrent processes: advancing human navigation models for simulation</h5>
-                    <p class="prog-authors"><em>Sabine Timpf, Franziska Klügl</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Using Social Cues for Wayfinding: An Eye-Tracking Study of Attention Allocation and Evidence Accumulation in a Virtual Reality T-Intersection</h5>
-                    <p class="prog-authors"><em>Yu Qiao, Carlo Campagnoli, Ed Manley</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-short" title="Short Paper"><i class="bi bi-file-earmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Towards a Validation Taxonomy for Agent-Based Models of Pedestrian Movement in Cities</h5>
-                    <p class="prog-authors"><em>Marcin Wozniak, Gabriele Filomena</em></p>
-                  </div>
-                </div>
-                <div class="prog-paper">
-                  <span class="prog-type ptype-journal" title="Journal Article"><i class="bi bi-journal-bookmark-fill"></i></span>
-                  <div class="prog-paper-body">
-                    <h5 class="prog-title">Predicting spatial familiarity by exploiting head and eye movements during pedestrian navigation in the real world</h5>
-                    <p class="prog-authors"><em>Markus Kattenbeck</em></p>
-                  </div>
-                </div>
-                </div>
-              </div>
-              <i class="faq-toggle bi bi-chevron-right"></i>
-            </div>
-            </div>
-          </div>
-        </div>
+                    <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-all">
+                        <h3>Tuesday, 22 September</h3>
+                        <div class="faq-container">
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>09:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Welcome</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>09:30 – 10:30 &middot; Session 1: Geospatial Semantics</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; From Markers to Meaning: A
+                                                    Cognitive–Symbolic Model of Cultural Placemaking</h4>
+                                                <p><em>Maria Carolina Quintana Noriega, Christophe Claramunt</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; When are geographic quantities
+                                                    semantically compatible with each other? Towards a constructive
+                                                    theory of amounts, magnitudes, and proportions</h4>
+                                                <p><em>Simon Scheider, Shuai Wang, Eric Jacob Top</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Through and Through: corpus-based
+                                                    semantic analysis of a spatial preposition</h4>
+                                                <p><em>Brandon Bennett, Maria M Hedblom</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Towards a statistical
+                                                    approach to humanistic-geographical place concepts</h4>
+                                                <p><em>René Westerholt</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>11:00 – 12:30 &middot; Session 2: Spatial Cognition</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Mapping Cycling Experience in
+                                                    Valence-Arousal Space: A Geometric Approach to Appraisal
+                                                    Heterogeneity</h4>
+                                                <p><em>Ayda Grisiute, Johanna Wörle, Panagiotis Mavros, Martin
+                                                        Raubal</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Cognition and Computation of
+                                                    Minimal Viewpoints for Understanding Building Layouts</h4>
+                                                <p><em>Ahmed Aly, Jakub Krukar</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Habitual use of navigation
+                                                    systems impairs spatial learning depending on navigation strategy
+                                                </h4>
+                                                <p><em>Qi Ying , Christopher Hilton, Sara Fabrikant</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Capturing Environmental-Scale
+                                                    Spatial Cognition in Applied Settings: A Field-Based Pilot with
+                                                    Firefighters</h4>
+                                                <p><em>Chelsie McWhorter, Kathy Baylis, Mary Hegarty</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Context-sensitive Spatial Deixis
+                                                    through the Lens of Mental Models</h4>
+                                                <p><em>Adwitiya Mandal, Zoe Falomir, Kai-Florian Richter</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Visual attention allocation
+                                                    between social and navigational cues during wayfinding</h4>
+                                                <p><em>Gökçe Orlu Özen, Çağrı Imamoğlu, Elif Surer, Burçak Altay</em>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:30 &ndash; 14:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Lunch Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>14:00 &ndash; 15:00</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/krzysztof.html">Keynote Session &ndash;
+                                            Krzysztof Janowicz</a></h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>15:00 &ndash; 15:30</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>15:30 – 17:00 &middot; Session 3: Language and Foundation Models</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; On Spatial Reasoning and
+                                                    Perspective Transformation in Language Models</h4>
+                                                <p><em>Haotong Zhang, Ian Pratt-Hartmann</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; LMM Modality Transfer: a
+                                                    Pre-requisite for Autonomous GIS Agents</h4>
+                                                <p><em>Ivan Majic, Zexian Huang, Franziska Hübl, Krzysztof Janowicz,
+                                                        Meilin Shi, Mina Karimi, Zilong Liu, Alexandra Fortacz</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Structuring the Underwater
+                                                    Environment: A Taxonomy of Aquatic Landmarks</h4>
+                                                <p><em>Eva Nuhn, Sabine Timpf</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Conceptual Vagueness as Humans
+                                                    and LLMs Represent: Evidence from Migration Distance Categorization
+                                                </h4>
+                                                <p><em>Songlin Wang, Krzysztof Janowicz, Ailin Benitez Cortes, Marion
+                                                        Borderon, Yingjing Huang, Mina Karimi, Zilong Liu, Annika Süß,
+                                                        Patrick Sakdapolrak</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; GeoKG for GeoFM: Neuro-Symbolic
+                                                    Integration of Semantically-enriched Geospatial-Temporal Data</h4>
+                                                <p><em>Kai Moltzen, Debayan Banerjee, Julian Burmester, Anna Ehrenberg,
+                                                        Martin Kohler, Cedric Möller, Jann Pfeifer, Tilahun Abedissa
+                                                        Taffa, Hanna Marlene Schulz, Aida Usmanova, Patrick Westphal,
+                                                        Ricardo Usbeck</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Golden Gate Bridge, as Always
+                                                </h4>
 
-      </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>18:00 &ndash; 20:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Icebreaker &ndash; York Art Gallery</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mt-4">Wednesday, 23 September</h3>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h3>09:00 – 10:30 &middot; Session 4: Spatial Analysis and Modeling</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; An Operator Framework for
+                                                    Real-time Analytics of Streamed Fields</h4>
+                                                <p><em>JJ Paul, Silvia Nittel</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; From Feature Attribution to
+                                                    Spatial Information Structure: Interpreting Urban Pedestrian Flows
+                                                    with Explainable AI</h4>
+                                                <p><em>Atakilti Kiros, Yuri Ribakov, Israel Klein, Achituv Cohen</em>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Spatiotemporal Adaptive Learning
+                                                    for Flow-based Graph Neural Networks</h4>
+                                                <p><em>Fengjiao Li, Meiliu Wu, Ana Basiri</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; The Same Street, Different Safety
+                                                    Judgments: Evaluative Context Effects in Daytime and Nighttime
+                                                    Street View Imagery</h4>
+                                                <p><em>Tong Qin, Nico Van de Weghe, Wim Fias, Haosheng Huang</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Decision-Making Under Uncertainty
+                                                    in Tsunami Evacuation: Individual Differences in Information
+                                                    Consultation and Risk Perception</h4>
+                                                <p><em>Shota Iwama, Sihwan Lee, Hong Hu, Takanori Nanahara</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Learning street view
+                                                    representations based on a spatiotemporal contrastive learning
+                                                    framework</h4>
+                                                <p><em>Yong Li, Yingjing Huang, and Fan Zhang</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>11:00 &ndash; 12:30</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/#thematic">Thematic Sessions (in parallel)</a>
+                                    </h4>
+                                    <p><em>1) Indoor-vs-Outdoor Spatial Information</em></p>
+                                    <p><em>2) Spatial Information Theory, Spatial Cognition, and Spatial-HCI? What, Why,
+                                            and Why now?</em></p>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:30 &ndash; 13:30</time></div>
+                                <div class="col-md-10">
+                                    <h4>Lunch Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>13:30 &ndash; 14:30</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/laura.html">Keynote Session &ndash; Laura
+                                            Alessandretti</a></h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>14:30 – 15:30 &middot; Session 5: Spatial Search</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Much of Geospatial Web Search Is
+                                                    Beyond Traditional GIS</h4>
+                                                <p><em>Ilya Ilyankou, Stefano Cavazzi, James Haworth</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Georeferencing Non-Gazetteered
+                                                    Place Names using Biological Specimen Records</h4>
+                                                <p><em>Aneesha Fernando, Surangika Ranathunga, Kristin Stock, Raj
+                                                        Prasanna, Christopher B. Jones</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Document Geocoding for Inferring
+                                                    Spatial Familiarity within Reddit text</h4>
+                                                <p><em>Paddy Smith, Ed Manley, Myles Gould</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Comparing thematic and search
+                                                    term-based coding in understanding sense of place in survey research
+                                                </h4>
+                                                <p><em>Cotton, Isabel, Brooke McWherter, Thora Tenbrink, and Kate
+                                                        Sherren</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>15:30 &ndash; 18:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Social Activities</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mt-4">Thursday, 24 September</h3>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h3>09:00 – 10:30 &middot; Session 6: Navigation and Wayfinding I</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Extending ISO-Space to Annotate
+                                                    Spatial Information in Route Descriptions</h4>
+                                                <p><em>Samira Goudarzi Ali Akbari, Stephan Winter, Martin Tomko</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Mapinou: a Game to Assess the
+                                                    Skill of Using Pan-Scalar Maps</h4>
+                                                <p><em>Justin Berli, Guillaume Touya</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Learning a map under positive
+                                                    emotions: How self-reported arousal and individual differences
+                                                    relate to route and survey knowledge</h4>
+                                                <p><em>Veronica Muffato</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Representing Retail Wayfinding: A
+                                                    Requirement-Driven Study Design for Non-Visual Supermarket
+                                                    Navigation</h4>
+                                                <p><em>Xiang Zhou, Sabine Timpf</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Simulating Path Integration with
+                                                    Continuous Attractor Neural Networks</h4>
+                                                <p><em>Yulin Wu, Ed Manley</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Feeling the heat? Heat stress
+                                                    impairs landmark but not route knowledge in a VR navigation task
+                                                </h4>
+                                                <p><em>Alessandro J. Pierro, Sara Fabrikant, Armand Kapaj</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Beyond urban form:
+                                                    Introducing dynamic factors in agent-based simulations of pedestrian
+                                                    movement</h4>
+                                                <p><em>Marcin Wozniak, Gabriele Filomena</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>11:00 &ndash; 12:30</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/#thematic">Thematic Sessions (in parallel)</a>
+                                    </h4>
+                                    <p><em>3) Leveraging Geospatial Innovation for Safeability</em></p>
+                                    <p><em>4) Generated Geography: Responsible GeoAI in the Era of Foundation
+                                            Models</em></p>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:30 &ndash; 14:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Lunch Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>14:00 &ndash; 15:00</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/hugo.html">Keynote Session &ndash; Hugo
+                                            Spiers</a></h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>15:30 &ndash; 17:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Doctoral Mentoring Programme Session</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>19:00 &ndash; 22:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Banquet &ndash; National Railway Museum</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mt-4">Friday, 25 September</h3>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h3>09:00 – 10:30 &middot; Session 7: Qualitative Spatial Reasoning</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Qualitative Space of Material
+                                                    Documents</h4>
+                                                <p><em>Mark Bell, John G. Stell</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; RCC-8 as a Benchmark for
+                                                    Diagrammatic Reasoning in Multimodal Foundation Models</h4>
+                                                <p><em>Robert E. Blackwell, Anthony G Cohn</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; An Extended Qualitative Model for
+                                                    Reasoning about 3D Objects using Depth and Different Perspectives
+                                                </h4>
+                                                <p><em>Martí Ejarque, Zoe Falomir</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; From Trajectories to Relations:
+                                                    Interpreting Overtake Manoeuvres with Large Language Models and
+                                                    Qualitative Spatial Representations</h4>
+                                                <p><em>Jana Verdoodt, Changbo Zhang, Lars De Sloover, Nico Van de Weghe,
+                                                        Haosheng Huang</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Limits of Spatial Reasoning using
+                                                    LLMs</h4>
+                                                <p><em>Varis Ithivatana, Brandon Bennett</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; A Cross-Linguistic Evaluation of
+                                                    Cardinal Direction Reasoning in LLMs</h4>
+                                                <p><em>Panagiota Gyftou, Robert E. Blackwell, Manolis Koubarakis,
+                                                        Anthony G Cohn</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>11:00 – 12:00 &middot; Session 8: Navigation and Wayfinding II</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; From sequential decisions to
+                                                    concurrent processes: advancing human navigation models for
+                                                    simulation</h4>
+                                                <p><em>Sabine Timpf, Franziska Klügl</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Using Social Cues for Wayfinding:
+                                                    An Eye-Tracking Study of Attention Allocation and Evidence
+                                                    Accumulation in a Virtual Reality T-Intersection</h4>
+                                                <p><em>Yu Qiao, Carlo Campagnoli, Ed Manley</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Towards a Validation Taxonomy for
+                                                    Agent-Based Models of Pedestrian Movement in Cities</h4>
+                                                <p><em>Marcin Wozniak, Gabriele Filomena</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Predicting spatial
+                                                    familiarity by exploiting head and eye movements during pedestrian
+                                                    navigation in the real world</h4>
+                                                <p><em>Markus Kattenbeck</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:00 &ndash; 12:30</time></div>
+                                <div class="col-md-10">
+                                    <h4>Awards and Closing</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <script>
-        (function() {
-          const tabs = document.querySelectorAll('#programme .nav-tabs .nav-link');
-          const items = document.querySelectorAll('#programme .faq-item');
-          tabs.forEach(tab => {
-            tab.addEventListener('click', function(e) {
-              e.preventDefault();
-              tabs.forEach(t => t.classList.remove('active'));
-              this.classList.add('active');
-              const day = this.getAttribute('data-day');
-              items.forEach(it => {
-                it.style.display = (day === 'all' || it.getAttribute('data-day') === day) ? '' : 'none';
-              });
-            });
-          });
-          // accordion toggle (same behaviour as thematic sessions)
-          document.querySelectorAll('#programme .faq-item h3, #programme .faq-item .faq-toggle').forEach(el => {
-            el.addEventListener('click', function() {
-              this.closest('.faq-item').classList.toggle('faq-active');
-            });
-          });
-        })();
-      </script>
-    </section>
+                    <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-tue">
+                        <div class="faq-container">
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>09:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Welcome</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>09:30 – 10:30 &middot; Session 1: Geospatial Semantics</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; From Markers to Meaning: A
+                                                    Cognitive–Symbolic Model of Cultural Placemaking</h4>
+                                                <p><em>Maria Carolina Quintana Noriega, Christophe Claramunt</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; When are geographic quantities
+                                                    semantically compatible with each other? Towards a constructive
+                                                    theory of amounts, magnitudes, and proportions</h4>
+                                                <p><em>Simon Scheider, Shuai Wang, Eric Jacob Top</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Through and Through: corpus-based
+                                                    semantic analysis of a spatial preposition</h4>
+                                                <p><em>Brandon Bennett, Maria M Hedblom</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Towards a statistical
+                                                    approach to humanistic-geographical place concepts</h4>
+                                                <p><em>René Westerholt</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>11:00 – 12:30 &middot; Session 2: Spatial Cognition</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Mapping Cycling Experience in
+                                                    Valence-Arousal Space: A Geometric Approach to Appraisal
+                                                    Heterogeneity</h4>
+                                                <p><em>Ayda Grisiute, Johanna Wörle, Panagiotis Mavros, Martin
+                                                        Raubal</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Cognition and Computation of
+                                                    Minimal Viewpoints for Understanding Building Layouts</h4>
+                                                <p><em>Ahmed Aly, Jakub Krukar</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Habitual use of navigation
+                                                    systems impairs spatial learning depending on navigation strategy
+                                                </h4>
+                                                <p><em>Qi Ying , Christopher Hilton, Sara Fabrikant</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Capturing Environmental-Scale
+                                                    Spatial Cognition in Applied Settings: A Field-Based Pilot with
+                                                    Firefighters</h4>
+                                                <p><em>Chelsie McWhorter, Kathy Baylis, Mary Hegarty</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Context-sensitive Spatial Deixis
+                                                    through the Lens of Mental Models</h4>
+                                                <p><em>Adwitiya Mandal, Zoe Falomir, Kai-Florian Richter</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Visual attention allocation
+                                                    between social and navigational cues during wayfinding</h4>
+                                                <p><em>Gökçe Orlu Özen, Çağrı Imamoğlu, Elif Surer, Burçak Altay</em>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:30 &ndash; 14:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Lunch Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>14:00 &ndash; 15:00</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/krzysztof.html">Keynote Session &ndash;
+                                            Krzysztof Janowicz</a></h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>15:00 &ndash; 15:30</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>15:30 – 17:00 &middot; Session 3: Language and Foundation Models</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; On Spatial Reasoning and
+                                                    Perspective Transformation in Language Models</h4>
+                                                <p><em>Haotong Zhang, Ian Pratt-Hartmann</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; LMM Modality Transfer: a
+                                                    Pre-requisite for Autonomous GIS Agents</h4>
+                                                <p><em>Ivan Majic, Zexian Huang, Franziska Hübl, Krzysztof Janowicz,
+                                                        Meilin Shi, Mina Karimi, Zilong Liu, Alexandra Fortacz</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Structuring the Underwater
+                                                    Environment: A Taxonomy of Aquatic Landmarks</h4>
+                                                <p><em>Eva Nuhn, Sabine Timpf</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Conceptual Vagueness as Humans
+                                                    and LLMs Represent: Evidence from Migration Distance Categorization
+                                                </h4>
+                                                <p><em>Songlin Wang, Krzysztof Janowicz, Ailin Benitez Cortes, Marion
+                                                        Borderon, Yingjing Huang, Mina Karimi, Zilong Liu, Annika Süß,
+                                                        Patrick Sakdapolrak</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; GeoKG for GeoFM: Neuro-Symbolic
+                                                    Integration of Semantically-enriched Geospatial-Temporal Data</h4>
+                                                <p><em>Kai Moltzen, Debayan Banerjee, Julian Burmester, Anna Ehrenberg,
+                                                        Martin Kohler, Cedric Möller, Jann Pfeifer, Tilahun Abedissa
+                                                        Taffa, Hanna Marlene Schulz, Aida Usmanova, Patrick Westphal,
+                                                        Ricardo Usbeck</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Golden Gate Bridge, as Always
+                                                </h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>18:00 &ndash; 20:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Icebreaker &ndash; York Art Gallery</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-wed">
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h3>09:00 – 10:30 &middot; Session 4: Spatial Analysis and Modeling</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; An Operator Framework for
+                                                    Real-time Analytics of Streamed Fields</h4>
+                                                <p><em>JJ Paul, Silvia Nittel</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; From Feature Attribution to
+                                                    Spatial Information Structure: Interpreting Urban Pedestrian Flows
+                                                    with Explainable AI</h4>
+                                                <p><em>Atakilti Kiros, Yuri Ribakov, Israel Klein, Achituv Cohen</em>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Spatiotemporal Adaptive Learning
+                                                    for Flow-based Graph Neural Networks</h4>
+                                                <p><em>Fengjiao Li, Meiliu Wu, Ana Basiri</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; The Same Street, Different Safety
+                                                    Judgments: Evaluative Context Effects in Daytime and Nighttime
+                                                    Street View Imagery</h4>
+                                                <p><em>Tong Qin, Nico Van de Weghe, Wim Fias, Haosheng Huang</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Decision-Making Under Uncertainty
+                                                    in Tsunami Evacuation: Individual Differences in Information
+                                                    Consultation and Risk Perception</h4>
+                                                <p><em>Shota Iwama, Sihwan Lee, Hong Hu, Takanori Nanahara</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Learning street view
+                                                    representations based on a spatiotemporal contrastive learning
+                                                    framework</h4>
+                                                <p><em>Yong Li, Yingjing Huang, and Fan Zhang</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>11:00 &ndash; 12:30</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/#thematic">Thematic Sessions (in parallel)</a>
+                                    </h4>
+                                    <p><em>1) Indoor-vs-Outdoor Spatial Information</em></p>
+                                    <p><em>2) Spatial Information Theory, Spatial Cognition, and Spatial-HCI? What, Why,
+                                            and Why now?</em></p>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:30 &ndash; 13:30</time></div>
+                                <div class="col-md-10">
+                                    <h4>Lunch Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>13:30 &ndash; 14:30</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/laura.html">Keynote Session &ndash; Laura
+                                            Alessandretti</a></h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>14:30 – 15:30 &middot; Session 5: Spatial Search</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Much of Geospatial Web Search Is
+                                                    Beyond Traditional GIS</h4>
+                                                <p><em>Ilya Ilyankou, Stefano Cavazzi, James Haworth</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Georeferencing Non-Gazetteered
+                                                    Place Names using Biological Specimen Records</h4>
+                                                <p><em>Aneesha Fernando, Surangika Ranathunga, Kristin Stock, Raj
+                                                        Prasanna, Christopher B. Jones</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Document Geocoding for Inferring
+                                                    Spatial Familiarity within Reddit text</h4>
+                                                <p><em>Paddy Smith, Ed Manley, Myles Gould</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Comparing thematic and search
+                                                    term-based coding in understanding sense of place in survey research
+                                                </h4>
+                                                <p><em>Cotton, Isabel, Brooke McWherter, Thora Tenbrink, and Kate
+                                                        Sherren</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>15:30 &ndash; 18:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Social Activities</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-thu">
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h3>09:00 – 10:30 &middot; Session 6: Navigation and Wayfinding I</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Extending ISO-Space to Annotate
+                                                    Spatial Information in Route Descriptions</h4>
+                                                <p><em>Samira Goudarzi Ali Akbari, Stephan Winter, Martin Tomko</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Mapinou: a Game to Assess the
+                                                    Skill of Using Pan-Scalar Maps</h4>
+                                                <p><em>Justin Berli, Guillaume Touya</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Learning a map under positive
+                                                    emotions: How self-reported arousal and individual differences
+                                                    relate to route and survey knowledge</h4>
+                                                <p><em>Veronica Muffato</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Representing Retail Wayfinding: A
+                                                    Requirement-Driven Study Design for Non-Visual Supermarket
+                                                    Navigation</h4>
+                                                <p><em>Xiang Zhou, Sabine Timpf</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Simulating Path Integration with
+                                                    Continuous Attractor Neural Networks</h4>
+                                                <p><em>Yulin Wu, Ed Manley</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Feeling the heat? Heat stress
+                                                    impairs landmark but not route knowledge in a VR navigation task
+                                                </h4>
+                                                <p><em>Alessandro J. Pierro, Sara Fabrikant, Armand Kapaj</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Beyond urban form:
+                                                    Introducing dynamic factors in agent-based simulations of pedestrian
+                                                    movement</h4>
+                                                <p><em>Marcin Wozniak, Gabriele Filomena</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>11:00 &ndash; 12:30</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/#thematic">Thematic Sessions (in parallel)</a>
+                                    </h4>
+                                    <p><em>3) Leveraging Geospatial Innovation for Safeability</em></p>
+                                    <p><em>4) Generated Geography: Responsible GeoAI in the Era of Foundation
+                                            Models</em></p>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:30 &ndash; 14:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Lunch Break</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>14:00 &ndash; 15:00</time></div>
+                                <div class="col-md-10">
+                                    <h4><a href="https://www.cosit2026.uk/hugo.html">Keynote Session &ndash; Hugo
+                                            Spiers</a></h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>15:30 &ndash; 17:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Doctoral Mentoring Programme Session</h4>
+                                </div>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>19:00 &ndash; 22:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Banquet &ndash; National Railway Museum</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-fri">
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <h3>09:00 – 10:30 &middot; Session 7: Qualitative Spatial Reasoning</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; Qualitative Space of Material
+                                                    Documents</h4>
+                                                <p><em>Mark Bell, John G. Stell</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; RCC-8 as a Benchmark for
+                                                    Diagrammatic Reasoning in Multimodal Foundation Models</h4>
+                                                <p><em>Robert E. Blackwell, Anthony G Cohn</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-text-fill" style="color:#0e1b4d;"
+                                                        title="Full Paper"></i>&nbsp; An Extended Qualitative Model for
+                                                    Reasoning about 3D Objects using Depth and Different Perspectives
+                                                </h4>
+                                                <p><em>Martí Ejarque, Zoe Falomir</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; From Trajectories to Relations:
+                                                    Interpreting Overtake Manoeuvres with Large Language Models and
+                                                    Qualitative Spatial Representations</h4>
+                                                <p><em>Jana Verdoodt, Changbo Zhang, Lars De Sloover, Nico Van de Weghe,
+                                                        Haosheng Huang</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Limits of Spatial Reasoning using
+                                                    LLMs</h4>
+                                                <p><em>Varis Ithivatana, Brandon Bennett</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; A Cross-Linguistic Evaluation of
+                                                    Cardinal Direction Reasoning in LLMs</h4>
+                                                <p><em>Panagiota Gyftou, Robert E. Blackwell, Manolis Koubarakis,
+                                                        Anthony G Cohn</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>10:30 &ndash; 11:00</time></div>
+                                <div class="col-md-10">
+                                    <h4>Coffee Break</h4>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <h3>11:00 – 12:00 &middot; Session 8: Navigation and Wayfinding II</h3>
+                                <div class="faq-content">
+                                    <div style="overflow:hidden">
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; From sequential decisions to
+                                                    concurrent processes: advancing human navigation models for
+                                                    simulation</h4>
+                                                <p><em>Sabine Timpf, Franziska Klügl</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Using Social Cues for Wayfinding:
+                                                    An Eye-Tracking Study of Attention Allocation and Evidence
+                                                    Accumulation in a Virtual Reality T-Intersection</h4>
+                                                <p><em>Yu Qiao, Carlo Campagnoli, Ed Manley</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-file-earmark-fill" style="color:#3a7ca5;"
+                                                        title="Short Paper"></i>&nbsp; Towards a Validation Taxonomy for
+                                                    Agent-Based Models of Pedestrian Movement in Cities</h4>
+                                                <p><em>Marcin Wozniak, Gabriele Filomena</em></p>
+                                            </div>
+                                        </div>
+                                        <div class="row schedule-item">
+                                            <div class="col-md-12">
+                                                <h4><i class="bi bi-journal-bookmark-fill" style="color:#f82249;"
+                                                        title="Journal Article"></i>&nbsp; Predicting spatial
+                                                    familiarity by exploiting head and eye movements during pedestrian
+                                                    navigation in the real world</h4>
+                                                <p><em>Markus Kattenbeck</em></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                            <div class="row schedule-item">
+                                <div class="col-md-2"><time>12:00 &ndash; 12:30</time></div>
+                                <div class="col-md-10">
+                                    <h4>Awards and Closing</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
     </main>
 
-        <footer id="footer" class="footer dark-background">
+    <footer id="footer" class="footer dark-background">
 
         <div class="copyright text-center">
             <div
