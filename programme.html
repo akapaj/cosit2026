@@ -127,27 +127,30 @@
         }
 
         @media print {
+          #header, #footer, #scroll-top, #preloader, #page-title-bg { display: none !important; }
 
-          #header,
-          #footer,
-          #scroll-top,
-          #preloader,
-          #page-title-bg {
-            display: none !important;
-          }
+          #programme .nav-tabs { display: none !important; }
 
-          #programme .nav-tabs {
-            display: none !important;
-          }
+          #programme .tab-pane { display: none !important; }
+          #programme #day-all { display: block !important; opacity: 1 !important; }
 
-          #programme .tab-pane {
-            display: none !important;
-          }
-
-          #programme #day-all {
+          /* Bootstrap's col-lg-9 + centered row leaves the content column
+             narrower than the page; use the full printable width instead. */
+          #programme .row.justify-content-center {
             display: block !important;
-            opacity: 1 !important;
+            margin: 0 !important;
           }
+          #programme #day-all.col-lg-9 {
+            max-width: 100% !important;
+            flex: 0 0 100% !important;
+            width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+          #programme .container { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+
+          /* Shrink Chrome's default ~1in page margins */
+          @page { margin: 10mm 12mm; }
 
           #programme .faq-content {
             display: grid !important;
@@ -156,42 +159,23 @@
             opacity: 1 !important;
             padding-top: 10px !important;
           }
+          #programme .faq-toggle { display: none !important; }
 
-          #programme .faq-toggle {
-            display: none !important;
-          }
+          /* Letting a whole session box avoid page breaks causes huge blank
+             gaps when it doesn't fit what's left on the page. Protect only
+             the smallest readable unit instead -- a single paper's title +
+             authors, or a one-line entry like Coffee Break -- so nothing
+             splits mid-entry, while big session boxes can flow across pages. */
+          #programme .faq-item .schedule-item { break-inside: avoid; page-break-inside: avoid; }
+          #programme .faq-item:not(:has(.faq-content)) { break-inside: avoid; page-break-inside: avoid; }
 
-          #programme .faq-item {
-            break-inside: avoid;
-            page-break-inside: avoid;
-          }
+          #programme .faq-item { border: 1px solid #999 !important; background: #fff !important; }
+          #programme .faq-active { background: #fff !important; border-color: #999 !important; }
+          #programme .faq-active h3 { color: #000 !important; }
 
-          #programme .faq-item {
-            border: 1px solid #999 !important;
-            background: #fff !important;
-          }
-
-          #programme .faq-active {
-            background: #fff !important;
-            border-color: #999 !important;
-          }
-
-          #programme .faq-active h3 {
-            color: #000 !important;
-          }
-
-          /* Screen-sized section padding wastes paper; tighten it for print */
-          #programme.section {
-            padding: 10px 0 !important;
-          }
-
-          #programme .section-title {
-            padding-bottom: 15px !important;
-          }
-
-          #programme h3.mt-4 {
-            margin-top: 20px !important;
-          }
+          #programme.section { padding: 10px 0 !important; }
+          #programme .section-title { padding-bottom: 15px !important; }
+          #programme h3.mt-4 { margin-top: 20px !important; }
         }
       </style>
 
