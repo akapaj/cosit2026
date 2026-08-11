@@ -118,13 +118,31 @@
         #programme .nav-tabs a {
           padding: 10px 28px;
         }
+        
+        @media print {
+          #header, #footer, #scroll-top, #preloader, #page-title-bg { display: none !important; }
+          #programme .nav-tabs { display: none !important; }
+          #programme .tab-pane { display: none !important; }
+          #programme #day-all { display: block !important; opacity: 1 !important; }
+          #programme .faq-content {
+            display: grid !important;
+            grid-template-rows: 1fr !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            padding-top: 10px !important;
+          }
+          #programme .faq-toggle { display: none !important; }
+          #programme .faq-item { break-inside: avoid; page-break-inside: avoid; }
+          #programme .faq-item { border: 1px solid #999 !important; background: #fff !important; }
+          #programme .faq-active { background: #fff !important; border-color: #999 !important; }
+          #programme .faq-active h3 { color: #000 !important; }
+        }
       </style>
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Programme<br></h2>
-        <p>The programme may be subject to slight changes up until the conference start &ndash; please check back
-          regularly for updates. Select a day and click an entry to expand it. Presentation times: Full papers, 15 min +
-          5 min Q&amp;A; Short papers, 8 min + 5 min Q&amp;A; Journal articles, 6 min + 3 min Q&amp;A.</p>
+<p>The programme may be subject to slight changes up until the conference start &ndash; please check back regularly for updates. Select a day and click an entry to expand it. Presentation times: Full papers, 15 min + 5 min Q&amp;A; Short papers, 8 min + 5 min Q&amp;A; Journal articles, 6 min + 3 min Q&amp;A.<br>
+Prefer a calendar view? See the <a href="schedule.html">schedule in calendar layout</a>. For a fully expandable, printable version of this programme, use your browser's print option (Ctrl/Cmd+P) &ndash; every session prints with its papers shown in full.</p>
       </div>
 
       <div class="container">
