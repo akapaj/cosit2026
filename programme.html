@@ -127,8 +127,22 @@
         }
 
         @media print {
-          #header, #footer, #scroll-top, #preloader, #page-title-bg { display: none !important; }
+#header, #footer, #scroll-top, #preloader { display: none !important; }
 
+          /* The page-title banner now holds the real "Programme" heading
+             and intro text, so it can't just be hidden -- strip the photo,
+             dark overlay, and oversized hero padding instead, and let the
+             text print in black on white like the rest of the page. */
+          #page-title-bg {
+            display: block !important;
+            background-image: none !important;
+            background-color: #fff !important;
+            padding: 6px 0 12px 0 !important;
+            text-align: center !important;
+          }
+          #page-title-bg:before { content: none !important; display: none !important; }
+          #page-title-bg h1 { color: #0e1b4d !important; font-size: 26px !important; margin-bottom: 6px !important; }
+          #page-title-bg p, #page-title-bg a { color: #000 !important; font-size: 11px !important; }
           #programme .nav-tabs { display: none !important; }
 
           #programme .tab-pane { display: none !important; }
