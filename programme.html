@@ -107,19 +107,39 @@
     </div>
 
     <!-- Programme Section -->
-    <style>
-      /* Same fix already applied to #papers: nav-tabs wrap onto two lines
-           with 5 long day labels and need vertical spacing between rows. */
-      #programme .nav-tabs .nav-item {
-        margin-bottom: 10px;
-      }
-    </style>
+<style>
+        #programme .nav-tabs {
+          text-align: center;
+          margin: auto;
+          display: block;
+          border-bottom: 0;
+          margin-bottom: 30px;
+          list-style: none;
+          padding-left: 0;
+        }
+        #programme .nav-tabs .nav-item {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+        #programme .nav-tabs .nav-link {
+          border: none;
+          border-radius: 50px;
+          font-weight: 600;
+          background-color: var(--heading-color);
+          color: var(--contrast-color);
+          padding: 10px 28px;
+          text-decoration: none;
+        }
+        #programme .nav-tabs .nav-link.active {
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+        }
+      </style>
 
     <div class="container section-title" data-aos="fade-up">
       <h2>Programme<br></h2>
       <p>The programme may be subject to slight changes up until the conference start &ndash; please check back
-        regularly for updates. Select a day and click an entry to expand it.<br>
-        Presentation times: Full papers, 15 min + 5 min Q&amp;A; Short papers, 8 min + 5 min Q&amp;A; Journal articles,
+        regularly for updates. Select a day and click an entry to expand it. Presentation times: Full papers, 15 min + 5 min Q&amp;A; Short papers, 8 min + 5 min Q&amp;A; Journal articles,
         6 min + 3 min Q&amp;A.</p>
     </div>
 
