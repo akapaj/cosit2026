@@ -75,7 +75,7 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 20 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      window.scrollY > 10 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
   scrollTop.addEventListener('click', (e) => {
