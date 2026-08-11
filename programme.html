@@ -138,7 +138,9 @@
           font-size: 15px;
         }
 
-        #programme #day-all > h3 { font-size: 20px; }
+        #programme #day-all>h3 {
+          font-size: 20px;
+        }
 
         @media print {
 
@@ -172,8 +174,7 @@
             margin-bottom: 6px !important;
           }
 
-          #page-title-bg p,
-          #page-title-bg a {
+          #page-title-bg p {
             display: none !important;
           }
 
@@ -234,6 +235,8 @@
           #programme .faq-item {
             padding: 10px 14px !important;
             margin-bottom: 6px !important;
+            border: 1px solid #999 !important;
+            background: #fff !important;
           }
 
           #programme .schedule-item {
@@ -256,9 +259,14 @@
             font-size: 12px !important;
           }
 
-                    #programme #day-all > h3 { font-size: 18px !important; margin-top: 14px !important; }
+          #programme #day-all>h3 {
+            font-size: 18px !important;
+            margin-top: 14px !important;
+          }
 
-                    #programme .faq-content p { font-size: 12px !important; }
+          #programme .faq-content p {
+            font-size: 12px !important;
+          }
 
           /* Letting a whole session box avoid page breaks causes huge blank
              gaps when it doesn't fit what's left on the page. Protect only
@@ -273,11 +281,6 @@
           #programme .faq-item:not(:has(.faq-content)) {
             break-inside: avoid;
             page-break-inside: avoid;
-          }
-
-          #programme .faq-item {
-            border: 1px solid #999 !important;
-            background: #fff !important;
           }
 
           #programme .faq-active {
@@ -295,10 +298,6 @@
 
           #programme .section-title {
             padding-bottom: 15px !important;
-          }
-
-          #programme h3.mt-4 {
-            margin-top: 20px !important;
           }
         }
       </style>
